@@ -240,6 +240,7 @@ struct TaskRow: View{
         .onDisappear{
             removeEmptyTask()
             save()
+            
         }
         
         
