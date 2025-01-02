@@ -35,7 +35,7 @@ struct MainView: View {
                     if pendingTasks.isEmpty {
                         Text("No tasks")
                             .font(.caption)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.orange)
                     }else{
                         ForEach(pendingTasks) {
                             
@@ -201,8 +201,9 @@ struct TaskRow: View{
                     save()
                 }
                 
-                .foregroundStyle( isPending ? .primary : .tertiary)
-                .strikethrough(!isPending, pattern: .dash, color: .gray)
+                
+                //.foregroundStyle( isPending ? .primary : .tertiary)
+                .strikethrough(!isPending, pattern: .solid, color: .orange)
                 
                 
                 
