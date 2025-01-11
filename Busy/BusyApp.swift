@@ -4,13 +4,23 @@ import SwiftUI
 //let screen = UIScreen.main.bounds
 @main
 struct BusyApp: App {
+    @State var isLoading: Bool = true
+    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .background(Color.red)
+            
+            if isLoading {
+                LoadingView(isLoading: $isLoading)
+            } else {
+                ContentView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
+            
+                
+            
+            
         }
     }
 }

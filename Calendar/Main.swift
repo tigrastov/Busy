@@ -2,9 +2,9 @@ import WidgetKit
 import SwiftUI
 
 @main
-struct CalendarWidget: Widget {
+struct Busy: Widget {
     
-    let kind: String = "Calendar"
+    let kind: String = "Busy as bees"
     
     var body: some WidgetConfiguration{
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
